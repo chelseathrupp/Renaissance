@@ -1,0 +1,83 @@
+
+@import 'reset';
+@import 'mixins';
+@import 'typography';
+
+
+$grey: #F9F9F9;
+$screen-sm-min: 20em;
+$screen-sm-max: 40em;
+
+
+#container{
+	outline: blue solid;
+	width:80%;
+	margin:auto;
+}
+
+#secondaryNav{
+	background-color: $grey;
+	width:100%;
+	float:left;
+
+	@media (min-width: $screen-sm-min) {
+		
+		ul{
+			display:none;
+			
+			li{
+				display:none;
+			}
+		}
+
+		.searchbox{
+				display:none;
+			}
+		}
+
+		@media (min-width: $screen-sm-max) {
+		
+		ul{
+			outline: red solid;
+			float:right;
+			display:block;
+			
+			li{
+				outline: yellow solid;
+				display: inline-block;
+				padding: 1.6em 1em;
+				display:block;
+			}
+		}
+
+		.searchbox{
+				outline: black solid;
+				float:right;
+			}
+		}
+
+}
+
+#mainNav{
+	outline: green solid;
+	width: 100%;
+	float:left;
+
+	 ul{
+
+		float: right;
+		outline: blue solid;
+
+			li{
+				outline: yellow solid;
+				display: inline-block;
+				padding: 2em 1em;
+			}
+
+	 }
+
+	 .logo{
+	 	width:18em;
+	 	padding: 0.9em 0;
+	 }
+}
