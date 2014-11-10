@@ -84,8 +84,41 @@ hr {
 input, select {
   vertical-align: middle; }
 
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  padding: 2.5em 0 1.5em 0;
+  font-size: 1.5em;
+  line-height: 120%; }
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  padding: 1.5em 0 0.5em 0.3em;
+  font-size: 1.5em;
+  line-height: 120%;
+  margin: 0.5em; }
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  padding: 1.5em 0 0.5em 0.3em;
+  font-size: 1.2em;
+  line-height: 120%; }
+
+p {
+  font-family: Helvetica;
+  font-weight: Lighter;
+  font-size: 1em;
+  padding: 1em;
+  line-height: 130%; }
+
+a {
+  text-decoration: none;
+  font-family: Helvetica;
+  font-weight: Lighter; }
+
 #container {
-  outline: blue solid;
   width: 80%;
   margin: auto; }
 
@@ -94,39 +127,187 @@ input, select {
   width: 100%;
   float: left; }
   @media (min-width: 20em) {
-    #secondaryNav ul {
-      display: none; }
-      #secondaryNav ul li {
+    #secondaryNav {
+      height: 3em; }
+      #secondaryNav i {
+        outline: red solid; }
+      #secondaryNav ul {
         display: none; }
-    #secondaryNav .searchbox {
-      display: none; } }
+      #secondaryNav .searchbox {
+        display: none; } }
   @media (min-width: 40em) {
     #secondaryNav ul {
-      outline: red solid;
       float: right;
       display: block; }
       #secondaryNav ul li {
-        outline: yellow solid;
         display: inline-block;
-        padding: 1.6em 1em;
-        display: block; }
+        padding: 1.6em 1em; }
     #secondaryNav .searchbox {
-      outline: black solid;
       float: right; } }
 
+#secondaryNav:before {
+  width: 100%;
+  height: 4px;
+  display: block;
+  content: "";
+  background-color: #01B1AF; }
+
 #mainNav {
-  outline: green solid;
   width: 100%;
   float: left; }
-  #mainNav ul {
-    float: right;
-    outline: blue solid; }
-    #mainNav ul li {
-      outline: yellow solid;
-      display: inline-block;
-      padding: 2em 1em; }
+  @media (min-width: 20em) {
+    #mainNav {
+      text-align: center; }
+      #mainNav ul {
+        display: none; } }
+  @media (min-width: 40em) {
+    #mainNav ul {
+      float: right;
+      display: block; }
+      #mainNav ul li {
+        display: inline-block;
+        padding: 2em 1em; } }
   #mainNav .logo {
     width: 18em;
     padding: 0.9em 0; }
+
+.headerImage {
+  position: absolute;
+  width: 100%;
+  top: 8em;
+  left: 0; }
+  .headerImage img {
+    height: 17em; }
+    @media (min-width: 20em) {
+      .headerImage img {
+        margin-left: -90%; } }
+    @media (min-width: 40em) {
+      .headerImage img {
+        margin-left: 0%; } }
+
+.info {
+  background-color: #595959;
+  float: left;
+  margin-top: 17em;
+  color: white; }
+  @media (min-width: 20em) {
+    .info {
+      text-align: center; } }
+
+.primary {
+  color: #FFF;
+  display: block;
+  width: 12em;
+  padding: 1em 1.5em 1em 1.5em;
+  margin: auto;
+  background: #ccd700;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ccd700), color-stop(100%, #b1bb1e));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ccd700 0%, #b1bb1e 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccd700', endColorstr='#b1bb1e',GradientType=0 );
+  /* IE6-9 */ }
+
+.whatWeOffer {
+  float: left;
+  text-align: center; }
+  .whatWeOffer h3.servicesMain {
+    color: #FFF;
+    display: block;
+    width: 100%;
+    padding: 1em 1.5em 1em 1.5em;
+    margin: auto;
+    background: #ccd700;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ccd700), color-stop(100%, #b1bb1e));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #ccd700 0%, #b1bb1e 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccd700', endColorstr='#b1bb1e',GradientType=0 );
+    /* IE6-9 */ }
+  .whatWeOffer h3.servicesSecond {
+    color: #FFF;
+    display: block;
+    width: 100%;
+    padding: 0.5em 1.5em 1em 1.5em;
+    background: #dddddd;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #dddddd 0%, #acacac 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #acacac));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #dddddd 0%, #acacac 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #dddddd 0%, #acacac 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #dddddd 0%, #acacac 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #dddddd 0%, #acacac 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#acacac',GradientType=0 );
+    /* IE6-9 */ }
+
+.whyRenaissance {
+  float: left;
+  text-align: center; }
+  .whyRenaissance h1:after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 12em;
+    height: 3px;
+    margin-top: 0.7em;
+    background-color: #2DCACA; }
+
+.latestBlogPost {
+  float: left;
+  text-align: center; }
+  .latestBlogPost h1:after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 12em;
+    height: 3px;
+    margin-top: 0.7em;
+    background-color: #2DCACA; }
+  .latestBlogPost a {
+    display: block;
+    width: 13em;
+    padding: 0.7em 1.5em 0.7em 1.5em;
+    background: #70e3e3;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #70e3e3 0%, #2dcaca 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #70e3e3), color-stop(100%, #2dcaca));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #70e3e3 0%, #2dcaca 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #70e3e3 0%, #2dcaca 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #70e3e3 0%, #2dcaca 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #70e3e3 0%, #2dcaca 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#70e3e3', endColorstr='#2dcaca',GradientType=0 );
+    /* IE6-9 */
+    color: white;
+    margin: 1em auto 1em auto; }
 
 /*# sourceMappingURL=styles.css.map */

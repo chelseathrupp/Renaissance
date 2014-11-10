@@ -1,0 +1,41 @@
+
+h2{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	padding: 2.5em 0 1.5em 0;
+	font-size:1.5em;
+	line-height: 120%;
+}
+
+h1{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	padding: 1.5em 0 0.5em 0.3em;
+	font-size:1.5em;
+	line-height: 120%;
+	margin:0.5em;
+// border-bottom:1px grey solid; - desktop
+}
+
+h3{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	padding: 1.5em 0 0.5em 0.3em;
+	font-size:1.2em;
+	line-height: 120%;
+}
+
+
+p{
+	font-family: Helvetica;
+	font-weight: Lighter;
+	font-size:1em;
+	padding: 1em;
+	line-height:130%;
+}
+
+a{
+	text-decoration: none;
+	font-family: Helvetica;
+	font-weight: Lighter;
+}
