@@ -87,7 +87,7 @@ input, select {
 h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  padding: 1em 0 1em 0;
+  padding: 1em 0 0.5em 0;
   font-size: 1.5em;
   line-height: 120%; }
 
@@ -110,7 +110,8 @@ p {
   font-family: Helvetica;
   font-weight: Lighter;
   font-size: 1em;
-  padding: 1em;
+  padding-bottom: 1em;
+  padding-top: 1em;
   line-height: 130%; }
 
 a {
@@ -138,15 +139,20 @@ body, html {
         display: none; }
       #secondaryNav .searchbox {
         display: none; } }
-  @media (min-width: 40em) {
+  @media (min-width: 70em) {
     #secondaryNav ul {
       float: right;
       display: block; }
       #secondaryNav ul li {
         display: inline-block;
-        padding: 1.6em 1em; }
+        padding: 1.2em 1em; }
+        #secondaryNav ul li a {
+          color: #595959;
+          font-size: 0.8em; }
     #secondaryNav .searchbox {
-      float: right; } }
+      float: right;
+      display: block;
+      outline: red solid; } }
 
 #secondaryNav:before, #secondaryNav:after {
   top: 0;
@@ -175,7 +181,7 @@ body, html {
   position: absolute;
   top: 0.5em;
   left: 1.5em; }
-@media (min-width: 40em) {
+@media (min-width: 70em) {
   .mobileNavHandle {
     display: none; } }
 
@@ -187,53 +193,52 @@ body, html {
       text-align: center; }
       #mainNav ul {
         display: none; } }
-  @media (min-width: 40em) {
+  @media (min-width: 70em) {
     #mainNav ul {
       float: right;
       display: block; }
       #mainNav ul li {
         display: inline-block;
-        padding: 2em 1em; } }
+        padding: 2em 1em; }
+        #mainNav ul li a {
+          color: #595959; }
+      #mainNav ul li.current {
+        background-color: #2DCACA; }
+        #mainNav ul li.current a {
+          color: white; } }
   #mainNav .logo {
     width: 18em;
-    padding: 0.9em 0; }
+    padding: 0.9em 0;
+    margin: 0 !important; }
+    @media (min-width: 70em) {
+      #mainNav .logo {
+        display: block;
+        float: left; } }
 
 .headerImage {
   position: absolute;
   width: 100%;
   top: 8em;
   left: 0;
-  overflow: hidden;
-  height: 17em; }
-  .headerImage img:nth-child(1) {
-    position: absolute;
-    width: 250%;
-    transform: translate(-60%, -50%);
-    top: 50%;
-    left: 50%; }
+  overflow: hidden; }
+  @media (min-width: 20em) {
+    .headerImage {
+      height: 17em; } }
+  @media (min-width: 70em) {
+    .headerImage {
+      height: 26em; } }
 
 .arrow {
   position: relative;
-  margin-top: 15em;
   left: 50%;
   transform: translateX(-50%);
   float: left; }
-
-.arrow:before, .arrow:after {
-  background-color: #595959;
-  content: "";
-  display: block;
-  width: 200px;
-  height: 100%;
-  position: absolute;
-  outline: red solid;
-  top: 0; }
-
-.arrow:before {
-  left: 100%; }
-
-.arrow:after {
-  right: 100%; }
+  @media (min-width: 20em) {
+    .arrow {
+      margin-top: 15em; } }
+  @media (min-width: 70em) {
+    .arrow {
+      margin-top: 23em; } }
 
 .info {
   background-color: #595959;
@@ -244,6 +249,54 @@ body, html {
   @media (min-width: 20em) {
     .info {
       text-align: center; } }
+  @media (min-width: 70em) {
+    .info {
+      text-align: left; } }
+  .info .primary {
+    color: #FFF;
+    display: block;
+    width: 12em;
+    padding: 1em 1.5em 1em 1.5em;
+    background: #ccd700;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ccd700), color-stop(100%, #b1bb1e));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #ccd700 0%, #b1bb1e 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccd700', endColorstr='#b1bb1e',GradientType=0 );
+    /* IE6-9 */
+    margin: 0.5em auto 3.5em auto; }
+    @media (min-width: 70em) {
+      .info .primary {
+        margin: 0.5em 0 3em 0;
+        color: #FFF;
+        display: block;
+        width: 9em;
+        padding: 1em 1.5em 1em 1.5em;
+        background: #ccd700;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ccd700), color-stop(100%, #b1bb1e));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+        /* IE10+ */
+        background: linear-gradient(to bottom, #ccd700 0%, #b1bb1e 100%);
+        /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccd700', endColorstr='#b1bb1e',GradientType=0 );
+        /* IE6-9 */ } }
 
 .info:before, .info:after {
   content: "";
@@ -260,31 +313,6 @@ body, html {
 .info:after {
   right: 100%; }
 
-.info .primary {
-  color: #FFF;
-  display: block;
-  width: 12em;
-  padding: 1em 1.5em 1em 1.5em;
-  margin: auto;
-  background: #ccd700;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ccd700), color-stop(100%, #b1bb1e));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, #ccd700 0%, #b1bb1e 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccd700', endColorstr='#b1bb1e',GradientType=0 );
-  /* IE6-9 */
-  margin-bottom: 3.5em;
-  margin-top: 0.5em; }
-
 .whatWeOffer {
   float: left;
   text-align: center; }
@@ -293,7 +321,6 @@ body, html {
     display: block;
     width: auto;
     padding: 1em 1.5em 1em 1.5em;
-    margin: auto;
     background: #ccd700;
     /* Old browsers */
     background: -moz-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);

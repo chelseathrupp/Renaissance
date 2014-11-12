@@ -8,8 +8,9 @@ $grey: #F9F9F9;
 $darkgrey: #595959;
 $mediumgrey: #676767;
 $brandcolour1: #01B1AF;
+$brandcolour2: #2DCACA;
 $phone: 20em;
-$desktop: 40em;
+$desktop: 70em;
 
 
 body,html{
@@ -22,8 +23,6 @@ body,html{
 	margin:auto;
 }
 
-
-
 #secondaryNav{
 	background: linear-gradient(to bottom, $brandcolour1 0%, $brandcolour1 4px, $grey 4px, $grey 100%);
 	position: relative;
@@ -31,7 +30,6 @@ body,html{
 	float:left;
 	
 		@media (min-width: $phone) {
-
 			height: 3em;
 
 			ul{
@@ -51,14 +49,23 @@ body,html{
 				
 				li{
 					display: inline-block;
-					padding: 1.6em 1em;
+					padding: 1.2em 1em;
+
+					a{
+							color: $darkgrey;
+							font-size:0.8em;
+					}
 				}
 		}
 
 		.searchbox{
 				float:right;
+				display: block;
+				outline: red solid;
+
 			}
 		}
+
 
 }
 
@@ -89,7 +96,6 @@ body,html{
 			top:0.3em;
 			left:-0.2em;
 		}
-
 		i:nth-child(2){
 			font-size:1.6em;
 			color: $mediumgrey;
@@ -97,23 +103,16 @@ body,html{
 			top:0.5em;
 			left:1.5em;
 		}
-
 		@media (min-width: $desktop){
 			display:none;
 		}
-
-
 }
-
-
-
 
 #mainNav{
 	width: 100%;
 	float:left;
 
 		@media (min-width: $phone){
-			
 			text-align: center;
 
 			 ul{
@@ -130,6 +129,18 @@ body,html{
 					li{
 						display: inline-block;
 						padding: 2em 1em;
+
+						a{
+							color: $darkgrey;
+						}
+					}
+
+					li.current{
+						background-color: $brandcolour2;
+
+							a{
+								color: white;
+							}
 					}
 	 			}
 		}
@@ -137,6 +148,13 @@ body,html{
 	 .logo{
 	 	width:18em;
 	 	padding: 0.9em 0;
+	 	margin: 0 !important;
+		
+		@media (min-width: $desktop){
+			display:block;
+			float:left;
+		}
+
 	 }
 }
 
@@ -146,57 +164,33 @@ body,html{
 	top:8em;
 	left:0;
 	overflow:hidden;
-	height:17em;
 
-		img:nth-child(1){
-			position:absolute;
-			width: 250%;
-			transform: translate(-60%,-50%);
-			top: 50%;
-			left: 50%;
-			// @media (min-width: $phone){
-			// 	margin-left:-90%;
-			// }
+	@media (min-width: $phone){
+		height:17em;
+	}
 
-			// @media (min-width: $desktop){
-			// 	margin-left:0%;
-			// }	
-		}
+	@media (min-width: $desktop){
+		height:26em;
+	}
+
+		
 }
-
-// .arrow{
-// 	position:absolute;
-// 	top:22.8em;
-// 	left: 50%;
-// 	transform: translateX(-50%);
-// 	outline: red solid;
-// }
 
 .arrow{
 	position:relative;
-	margin-top:15em;
 	left: 50%;
 	transform: translateX(-50%);
 	float:left;
-}
 
-.arrow:before,.arrow:after{
-	background-color: $darkgrey;
-	content: "";
-	display: block;
-	width: 200px;
-	height: 100%;
-	position: absolute;
-	outline: red solid;
-	top:0;
-}
+	@media (min-width: $phone){
+		margin-top:15em;
+	}
 
-.arrow:before{
-	left: 100%;
-}
+	@media (min-width: $desktop){
+		margin-top:23em;
+	}
 
-.arrow:after{
-	right: 100%;
+
 }
 
 .info{
@@ -209,6 +203,23 @@ body,html{
 		@media (min-width: $phone){
 			text-align: center;
 		}
+
+		@media (min-width: $desktop){
+			text-align: left;
+		}
+
+
+	.primary{
+		@include primary-action(12em);
+		margin: 0.5em auto 3.5em auto;
+
+		@media (min-width: $desktop){
+				margin: 0.5em 0 3em 0;
+				@include primary-action(9em);
+			}
+}
+
+
 }
 
 .info:before,.info:after{
@@ -224,11 +235,6 @@ body,html{
 }
 
 
-.info .primary{
-	@include primary-action(12em);
-	margin-bottom:3.5em;
-	margin-top:0.5em;
-}
 
 .whatWeOffer{
 	float:left;
@@ -237,7 +243,6 @@ body,html{
 	 h3.servicesMain{
 	 	@include primary-action(auto);
 	 	position: relative;
-
 	 }
 
 	 h3.servicesSecond{
@@ -254,11 +259,11 @@ body,html{
 	}
 
 	h3.servicesMain:before{
-			left: 100%;
+		left: 100%;
 	}
 
 	h3.servicesSecond:before{
-			left: 100%;
+		left: 100%;
 	}
 
 	h3.servicesMain:after{
@@ -269,8 +274,6 @@ body,html{
 		right: 100%;
 	}
 }
-
-
 
 .whyRenaissance{
 	float:left;
