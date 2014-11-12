@@ -6,6 +6,7 @@
 
 $grey: #F9F9F9;
 $darkgrey: #595959;
+$mediumgrey: #676767;
 $brandcolour1: #01B1AF;
 $phone: 20em;
 $desktop: 40em;
@@ -32,10 +33,6 @@ body,html{
 		@media (min-width: $phone) {
 
 			height: 3em;
-
-			i{
-				outline: red solid;
-			}
 
 			ul{
 				display:none;
@@ -83,6 +80,31 @@ body,html{
 	right: 100%;
 }
 
+.mobileNavHandle{
+
+		i:nth-child(1){
+			font-size:2em;
+			color: $mediumgrey;
+			position: absolute;
+			top:0.3em;
+			left:-0.2em;
+		}
+
+		i:nth-child(2){
+			font-size:1.6em;
+			color: $mediumgrey;
+			position: absolute;
+			top:0.5em;
+			left:1.5em;
+		}
+
+		@media (min-width: $desktop){
+			display:none;
+		}
+
+
+}
+
 
 
 
@@ -126,7 +148,7 @@ body,html{
 	overflow:hidden;
 	height:17em;
 
-		img{
+		img:nth-child(1){
 			position:absolute;
 			width: 250%;
 			transform: translate(-60%,-50%);
@@ -142,10 +164,45 @@ body,html{
 		}
 }
 
+// .arrow{
+// 	position:absolute;
+// 	top:22.8em;
+// 	left: 50%;
+// 	transform: translateX(-50%);
+// 	outline: red solid;
+// }
+
+.arrow{
+	position:relative;
+	margin-top:15em;
+	left: 50%;
+	transform: translateX(-50%);
+	float:left;
+}
+
+.arrow:before,.arrow:after{
+	background-color: $darkgrey;
+	content: "";
+	display: block;
+	width: 200px;
+	height: 100%;
+	position: absolute;
+	outline: red solid;
+	top:0;
+}
+
+.arrow:before{
+	left: 100%;
+}
+
+.arrow:after{
+	right: 100%;
+}
+
 .info{
 	background-color: $darkgrey;
 	float:left;
-	margin-top:17em;
+	margin-top:-0.2em;
 	color: white;
 	position: relative;
 
@@ -155,13 +212,7 @@ body,html{
 }
 
 .info:before,.info:after{
-	background-color: $darkgrey;
-	content: "";
-	display: block;
-	width: 200px;
-	height: 100%;
-	position: absolute;
-	top:0;
+	@include fullwidth-before-after($darkgrey);
 }
 
 .info:before{
@@ -173,8 +224,10 @@ body,html{
 }
 
 
-.primary{
+.info .primary{
 	@include primary-action(12em);
+	margin-bottom:3.5em;
+	margin-top:0.5em;
 }
 
 .whatWeOffer{
@@ -182,12 +235,42 @@ body,html{
 	text-align: center;
 
 	 h3.servicesMain{
-	 	@include primary-action(100%);
+	 	@include primary-action(auto);
+	 	position: relative;
+
 	 }
+
 	 h3.servicesSecond{
-	 	@include secondary-action(100%);
+	 	@include secondary-action(auto);
+	 	position: relative;
 	 }
+
+	 h3.servicesMain:after, h3.servicesMain:before{
+		 @include fullwidth-primary-gradient;
+	}
+	
+	h3.servicesSecond:after, h3.servicesSecond:before{
+		@include fullwidth-secondary-gradient;
+	}
+
+	h3.servicesMain:before{
+			left: 100%;
+	}
+
+	h3.servicesSecond:before{
+			left: 100%;
+	}
+
+	h3.servicesMain:after{
+		right: 100%;
+	}
+
+	h3.servicesSecond:after{
+		right: 100%;
+	}
 }
+
+
 
 .whyRenaissance{
 	float:left;
