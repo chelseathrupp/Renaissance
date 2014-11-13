@@ -50,7 +50,7 @@
 	position: absolute;
 	top: 0;
 	height: 100%;
-	width: 200px;
+	width: 200em;
 	background-color: $background;
 }
 
@@ -60,7 +60,7 @@
 	position: absolute;
 	top: 0;
 	height: 100%;
-	width: 200px;
+	width: 200em;
 	background: #ccd700; /* Old browsers */
 	background: -moz-linear-gradient(top,  #ccd700 0%, #b1bb1e 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccd700), color-stop(100%,#b1bb1e)); /* Chrome,Safari4+ */
@@ -77,7 +77,7 @@
 	position: absolute;
 	top: 0;
 	height: 100%;
-	width: 200px;
+	width: 200em;
 	background: #dddddd; /* Old browsers */
 	background: -moz-linear-gradient(top,  #dddddd 0%, #acacac 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dddddd), color-stop(100%,#acacac)); /* Chrome,Safari4+ */

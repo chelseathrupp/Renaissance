@@ -10,7 +10,9 @@ $mediumgrey: #676767;
 $brandcolour1: #01B1AF;
 $brandcolour2: #2DCACA;
 $phone: 20em;
-$desktop: 70em;
+$desktop: 65em;
+$big: 80em;
+$large: 130em;
 
 
 body,html{
@@ -19,8 +21,16 @@ body,html{
 }
 
 #container{
-	width:80%;
+	width:90%;
 	margin:auto;
+
+	@media (min-width: $big){
+		width:80%;
+	}
+
+	@media (min-width: $large){
+		width:60%;
+	}
 }
 
 #secondaryNav{
@@ -36,7 +46,7 @@ body,html{
 				display:none;
 			}
 
-			.searchbox{
+			.mainSearch{
 					display:none;
 				}
 			}
@@ -57,13 +67,47 @@ body,html{
 					}
 				}
 		}
+		
+		.mainSearch{
+			display: block;
+		}
 
-		.searchbox{
-				float:right;
-				display: block;
-				outline: red solid;
-
+		.mainSearch input#search{
+			  width: 210px;
+			  margin: 0.7em 1em 0 2em;
+			  height: 33px;
+			  background: white;
+			  border: none;
+			  font-size: 10pt;
+			  float: right;
+			  color: $mediumgrey;
+			  padding-left: 45px;
+			  -webkit-border-radius: 5px;
+			  -moz-border-radius: 5px;
+			  border-radius: 5px;
+			  transition: background 1s ease;
 			}
+
+		.mainSearch input#search:hover, .mainSearch input#search:focus, .mainSearch input#search:active{
+		    outline:none;
+		    // background: #0A4863;
+  		}
+
+  		.mainSearch #search.expand{
+			background: black;
+  		}
+
+  		.mainSearch span.searchicon{
+			  position: absolute;
+			  top: 0;
+			  right: 0;
+			  margin-top: 19px;
+			  margin-right: 190px;
+			  z-index: 1;
+			  color: $darkgrey;
+			  font-size: 1em;
+		}
+		
 		}
 
 
@@ -154,9 +198,10 @@ body,html{
 			display:block;
 			float:left;
 		}
-
 	 }
 }
+
+
 
 .headerImage{
 	position:absolute;
@@ -173,21 +218,31 @@ body,html{
 		height:26em;
 	}
 
+	@media (min-width: $large){
+		height:35em;
+	}
+
 		
 }
 
 .arrow{
 	position:relative;
-	left: 50%;
-	transform: translateX(-50%);
 	float:left;
 
 	@media (min-width: $phone){
 		margin-top:15em;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	@media (min-width: $desktop){
 		margin-top:23em;
+		left: 2em;
+		transform: translateX(0%);
+	}
+
+	@media (min-width: $large){
+		margin-top:32em;
 	}
 
 
@@ -210,6 +265,7 @@ body,html{
 
 
 	.primary{
+		text-align:center;
 		@include primary-action(12em);
 		margin: 0.5em auto 3.5em auto;
 
@@ -234,7 +290,40 @@ body,html{
 	right: 100%;
 }
 
+.whatWeOfferDesktop{
+	width: 100%;
+	outline: red solid;
+	float:left;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	// margin-top:50em;
+		@media (min-width: $phone){
+			display:none;
+		}
 
+		@media (min-width: $desktop){
+			display:flex;
+		}
+
+		.secondaryService{
+			flex-grow:1;
+			width:16em;
+			height:25em;
+			position: relative;
+			outline: blue solid;
+		}
+
+		.primaryService{
+			flex-grow: 2;
+			width:23em;
+			height:30em;
+			outline: red solid;
+			position: relative;
+			margin-right: 5%;
+			margin-left: 5%;
+		}
+}
 
 .whatWeOffer{
 	float:left;
@@ -273,7 +362,12 @@ body,html{
 	h3.servicesSecond:after{
 		right: 100%;
 	}
-}
+
+		@media (min-width: $desktop){
+			display:none;
+		}
+
+}	
 
 .whyRenaissance{
 	float:left;
