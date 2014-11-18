@@ -287,13 +287,34 @@ body, html {
   overflow: hidden; }
   @media (min-width: 20em) {
     .headerImage {
-      height: 17em; } }
+      height: 17em; }
+      .headerImage img {
+        transform: translateX(-40%);
+        height: 17em; } }
+  @media (min-width: 33em) {
+    .headerImage img {
+      height: 24em;
+      transform: translateX(-34%); } }
+  @media (min-width: 50em) {
+    .headerImage img {
+      height: 26em;
+      transform: translateX(-24%); } }
   @media (min-width: 65em) {
     .headerImage {
-      height: 26em; } }
+      height: 26em; }
+      .headerImage img {
+        height: 30em;
+        transform: translateX(-7%); } }
+  @media (min-width: 90em) {
+    .headerImage img {
+      height: 40em;
+      transform: translateX(0%); } }
   @media (min-width: 130em) {
     .headerImage {
-      height: 35em; } }
+      height: 35em; }
+      .headerImage img {
+        height: 45em;
+        transform: translateX(0%); } }
 
 .arrow {
   position: relative;
@@ -387,83 +408,89 @@ body, html {
 
 .whatWeOfferDesktop {
   width: 100%;
-  margin: 2.5em 0 2em 0;
+  margin: 4.5em 0 2em 0;
   padding: 0 0 2.8em 0;
   float: left;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   border-bottom: 2px solid #F9F9F9; }
+  .whatWeOfferDesktop p {
+    padding: 1.6em 1.6em 5em 1.6em; }
   @media (min-width: 20em) {
     .whatWeOfferDesktop {
       display: none; } }
   @media (min-width: 65em) {
     .whatWeOfferDesktop {
-      display: flex; } }
-  .whatWeOfferDesktop .secondaryService {
-    flex-grow: 1;
-    width: 16em;
-    height: 25em;
-    position: relative;
-    background-color: #F8F8F8; }
-    .whatWeOfferDesktop .secondaryService a.secondary {
-      color: #FFF;
-      display: block;
-      width: 100%;
-      background: #dddddd;
-      /* Old browsers */
-      background: -moz-linear-gradient(top, #dddddd 0%, #acacac 100%);
-      /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #acacac));
-      /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top, #dddddd 0%, #acacac 100%);
-      /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(top, #dddddd 0%, #acacac 100%);
-      /* Opera 11.10+ */
-      background: -ms-linear-gradient(top, #dddddd 0%, #acacac 100%);
-      /* IE10+ */
-      background: linear-gradient(to bottom, #dddddd 0%, #acacac 100%);
-      /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#acacac',GradientType=0 );
-      /* IE6-9 */
-      height: 2.8em;
-      text-align: center;
-      line-height: 2.8em;
-      position: absolute;
-      bottom: 0; }
-  .whatWeOfferDesktop .primaryService {
-    flex-grow: 2;
-    width: 23em;
-    height: 30em;
-    background-color: #F8F8F8;
-    position: relative;
-    margin-right: 5%;
-    margin-left: 5%; }
-    .whatWeOfferDesktop .primaryService a.primary {
-      color: #FFF;
-      display: block;
-      width: 100%;
-      background: #ccd700;
-      /* Old browsers */
-      background: -moz-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
-      /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ccd700), color-stop(100%, #b1bb1e));
-      /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
-      /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
-      /* Opera 11.10+ */
-      background: -ms-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
-      /* IE10+ */
-      background: linear-gradient(to bottom, #ccd700 0%, #b1bb1e 100%);
-      /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccd700', endColorstr='#b1bb1e',GradientType=0 );
-      /* IE6-9 */
-      height: 3.3em;
-      text-align: center;
-      line-height: 3.3em;
-      position: absolute;
-      bottom: 0; }
+      display: flex; }
+      .whatWeOfferDesktop .secondaryService {
+        flex-grow: 1;
+        width: 16em;
+        position: relative;
+        background-color: #F8F8F8; }
+        .whatWeOfferDesktop .secondaryService a.secondary {
+          color: #FFF;
+          display: block;
+          width: 100%;
+          background: #dddddd;
+          /* Old browsers */
+          background: -moz-linear-gradient(top, #dddddd 0%, #acacac 100%);
+          /* FF3.6+ */
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #acacac));
+          /* Chrome,Safari4+ */
+          background: -webkit-linear-gradient(top, #dddddd 0%, #acacac 100%);
+          /* Chrome10+,Safari5.1+ */
+          background: -o-linear-gradient(top, #dddddd 0%, #acacac 100%);
+          /* Opera 11.10+ */
+          background: -ms-linear-gradient(top, #dddddd 0%, #acacac 100%);
+          /* IE10+ */
+          background: linear-gradient(to bottom, #dddddd 0%, #acacac 100%);
+          /* W3C */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#acacac',GradientType=0 );
+          /* IE6-9 */
+          height: 2.8em;
+          text-align: center;
+          line-height: 2.8em;
+          position: absolute;
+          bottom: 0; }
+        .whatWeOfferDesktop .secondaryService img {
+          height: auto;
+          width: 100%; }
+      .whatWeOfferDesktop .primaryService {
+        flex-grow: 2;
+        width: 23em;
+        background-color: #F8F8F8;
+        position: relative;
+        margin-right: 5%;
+        margin-left: 5%; }
+        .whatWeOfferDesktop .primaryService a.primary {
+          color: #FFF;
+          display: block;
+          width: 100%;
+          background: #ccd700;
+          /* Old browsers */
+          background: -moz-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+          /* FF3.6+ */
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ccd700), color-stop(100%, #b1bb1e));
+          /* Chrome,Safari4+ */
+          background: -webkit-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+          /* Chrome10+,Safari5.1+ */
+          background: -o-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+          /* Opera 11.10+ */
+          background: -ms-linear-gradient(top, #ccd700 0%, #b1bb1e 100%);
+          /* IE10+ */
+          background: linear-gradient(to bottom, #ccd700 0%, #b1bb1e 100%);
+          /* W3C */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccd700', endColorstr='#b1bb1e',GradientType=0 );
+          /* IE6-9 */
+          height: 3.3em;
+          text-align: center;
+          line-height: 3.3em;
+          position: absolute;
+          bottom: 0; }
+        .whatWeOfferDesktop .primaryService img {
+          height: auto;
+          width: 100%; } }
 
 .whatWeOffer {
   float: left;
@@ -651,7 +678,11 @@ body, html {
             float: left; }
           .whyRenaissance .flexcontent1 .whyRenaissanceTestimonials div:nth-child(1) {
             margin-top: -3em;
-            padding-bottom: 2em; } }
+            padding-bottom: 2em;
+            float: left; }
+          .whyRenaissance .flexcontent1 .whyRenaissanceTestimonials div:nth-child(2) {
+            padding-bottom: 2em;
+            float: left; } }
 
 .latestBlogPost {
   float: left;
@@ -696,15 +727,13 @@ body, html {
       outline: blue solid;
       width: 100%; }
       .latestBlogPost a {
-        width: 6em;
-        position: absolute;
-        right: 12em;
-        top: 126em; }
+        float: right; }
       .latestBlogPost .mobileBlogText {
         display: none; }
       .latestBlogPost .desktopBlogText {
         display: block;
-        outline: red solid; }
+        outline: red solid;
+        float: left; }
         .latestBlogPost .desktopBlogText h3 {
           margin: 3em 0 0 0 !important;
           padding: 0 !important; }

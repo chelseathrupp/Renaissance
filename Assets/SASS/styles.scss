@@ -10,8 +10,11 @@ $mediumgrey: #676767;
 $brandcolour1: #01B1AF;
 $brandcolour2: #2DCACA;
 $phone: 20em;
+$phablet: 33em;
+$tablet: 50em;
 $desktop: 65em;
 $big: 80em;
+$bigger: 90em;
 $large: 130em;
 
 
@@ -252,14 +255,50 @@ body,html{
 
 	@media (min-width: $phone){
 		height:17em;
+
+		img{
+			transform: translateX(-40%);
+			height: 17em;
+		}
+	}
+
+	@media (min-width: $phablet){
+		img{
+			height: 24em;
+			transform: translateX(-34%);
+		}
+	}
+
+	@media (min-width: $tablet){
+		img{
+			height: 26em;
+			transform: translateX(-24%);
+		}
 	}
 
 	@media (min-width: $desktop){
 		height:26em;
+		img{
+			height: 30em;
+			transform: translateX(-7%);
+		}
+
 	}
+
+	@media (min-width: $bigger){
+		img{
+			height:40em;
+			transform: translateX(-0%);
+		}
+	}
+
 
 	@media (min-width: $large){
 		height:35em;
+		img{
+			height:45em;
+			transform: translateX(0%);
+		}
 	}
 
 		
@@ -333,7 +372,7 @@ body,html{
 
 .whatWeOfferDesktop{
 	width: 100%;
-	margin:2.5em 0 2em 0;
+	margin:4.5em 0 2em 0;
 	padding: 0 0 2.8em 0;
 	float: left;
 	display: flex;
@@ -341,18 +380,23 @@ body,html{
 	align-items: flex-start;
 	border-bottom: 2px solid $grey;
 
+	p{
+		padding: 1.6em 1.6em 5em 1.6em;
+	}
+
+
 		@media (min-width: $phone){
 			display:none;
+
 		}
 
 		@media (min-width: $desktop){
 			display:flex;
-		}
 
 		.secondaryService{
 			flex-grow:1;
 			width:16em;
-			height:25em;
+			// height:25em;
 			position: relative;
 			background-color: $lightgrey;
 
@@ -364,12 +408,18 @@ body,html{
 				position: absolute;
 				bottom:0;
 			}
+
+			img{
+				height: auto;
+				width:100%;
+
+			}
 		}
 
 		.primaryService{
 			flex-grow: 2;
 			width:23em;
-			height:30em;
+			// height:30em;
 			background-color: $lightgrey;
 			position: relative;
 			margin-right: 5%;
@@ -383,7 +433,26 @@ body,html{
 				position: absolute;
 				bottom:0;
 			}
+
+			img{
+					height: auto;
+					width:100%;
+
+				}
 		}
+
+		}
+
+
+		@media (min-width: $big){
+			.primaryService{
+				// height: 35em;
+			}
+			.secondaryService{
+				// height: 26em;
+			}
+		}
+
 }
 
 .whatWeOffer{
@@ -517,6 +586,12 @@ body,html{
 					div:nth-child(1){
 						margin-top: -3em;
 						padding-bottom:2em;
+						float:left;
+					}
+
+					div:nth-child(2){
+						padding-bottom:2em;
+						float:left
 					}
 
 				}
@@ -555,10 +630,7 @@ body,html{
 			width:100%;
 			
 			a{	
-				width: 6em;
-				position: absolute;
-				right: 12em;
-				top: 126em;
+				float:right;
 
 			}
 
@@ -569,6 +641,7 @@ body,html{
 			.desktopBlogText{
 				display: block;
 				outline: red solid;
+				float:left;
 
 
 				h3{
