@@ -6,6 +6,7 @@
 $lightgrey: #F8F8F8;
 $grey: #F9F9F9;
 $darkgrey: #595959;
+$darkestgrey: #444444;
 $mediumgrey: #676767;
 $brandcolour1: #01B1AF;
 $brandcolour2: #2DCACA;
@@ -188,6 +189,8 @@ body,html{
 	width: 100%;
 	float:left;
 	z-index:300;
+	background-color: white;
+	position: relative;
 
 		@media (min-width: $phone){
 			text-align: center;
@@ -244,12 +247,25 @@ body,html{
 	 }
 }
 
+#mainNav:before,#mainNav:after{
+	@include fullwidth-before-after(white);
+}
+
+#mainNav:before{
+	left: 100%;
+}
+
+#mainNav:after{
+	right: 100%;
+}
+
 
 
 .headerImage{
 	position:absolute;
 	width:100%;
 	top:8em;
+	z-index: 400;
 	left:0;
 	overflow:hidden;
 
@@ -307,6 +323,7 @@ body,html{
 .arrow{
 	position:relative;
 	float:left;
+	z-index:450;
 
 	@media (min-width: $phone){
 		margin-top:15em;
@@ -330,7 +347,7 @@ body,html{
 .info{
 	background-color: $darkgrey;
 	float:left;
-	margin-top:-0.2em;
+	margin-top:26em;
 	color: white;
 	position: relative;
 
@@ -674,6 +691,219 @@ body,html{
 				h1:after{
 				@include h1-after;
 				}
+	}
+
+}
+
+
+// ------------ Staff Dashboard
+
+#staffDash{
+	height:100vh;
+	width:100%;
+	position: absolute;
+	z-index:-1;
+	background-color: $darkestgrey;
+
+	@media (min-width: $phone){
+		.staffContent{
+			margin-top:9.2em;
+			width: 100%;
+			text-align: center;
+
+			h3{
+				color: white;
+				font-size: 1.3em;
+				padding-bottom:2em;
+			}
+
+			form label{
+				color: white;
+				font-family: Helvetica;
+				font-weight: Lighter;
+				font-size:1.1em;
+			}
+
+			form input[type="text"],form input[type="password"]{
+				width:90%;
+				height:3em;
+				margin-bottom:1.8em;
+				margin-top:1em;
+				transition: background-color 1s ease;
+			}
+
+
+			 form input[type="text"]:hover, form input[type="text"]:focus, form input[type="text"]:active{
+			    outline:none;
+			    color: $darkgrey;
+			    background-color: #EEEEEE;
+	  		}
+
+
+			 form input[type="password"]:hover, form input[type="password"]:focus, form input[type="password"]:active{
+			    outline:none;
+			    color: $darkgrey;
+			    background-color: #EEEEEE;
+	  		}
+
+			form input[type="submit"]{
+				@include primary-submit(14em);
+				border: none;
+				padding: .7em 0 0.7em 0;
+				font-size:1em;
+				margin:1.3em 0 1em 0;
+
+			}
+
+			a{
+				text-decoration: underline;
+				color: grey;
+				transition: color 0.4s ease;
+			}
+
+			a:hover{
+				color: white;
+			}
+		}
+	}
+
+	@media (min-width: $phablet){
+			
+			h3{
+				color: white;
+				font-size: 1.3em;
+				padding-bottom:1em;
+			}
+
+			form{
+				width:50%;
+				margin: auto;
+				padding:3em 4em 4em 4em;
+				background-color: #4A4A4A;
+			}
+
+			form input[type="text"],form input[type="password"]{
+				height:2em !important;
+			}
+	}
+
+	@media (min-width: $desktop){
+		
+			form{
+				width:24em;
+				margin: auto;
+				padding:3em 4em 4em 4em;
+				background-color: #4A4A4A;
+			}
+	}
+
+		
+}
+
+#staffDashAside{
+	@extend #staffDash;
+	width:18em;
+	color: white;
+
+	@media (min-width: $phone){
+		display:none;
+
+	}
+
+	@media (min-width: $tablet){
+		display:block;
+	}
+
+
+	.staffAsideContent{
+		margin-top:8.5em;
+		
+		h4{
+			font-size:1.2em;
+			padding: 0.4em 1em 1em 1em;
+
+
+		}
+
+		p{
+			font-size:0.8em;
+			margin: 0 !important;
+			padding: 2em 1em 0em 1.6em;
+		}
+
+		ul{
+			margin-top: 2em;
+
+		
+			li{	
+				padding-left:1.4em;
+				list-style-type: none;
+				line-height:260%;
+				font-family: Helvetica;
+				font-weight: Lighter;
+				@include staff-dash-buttons;
+			}
+
+			li:hover{
+				@include staff-dash-buttons-hover;
+			}
+		}
+
+
+	}
+}
+
+#staffDash2{
+	height:100vh;
+	width:100%;
+	position: absolute;
+	z-index:-2;
+	background-color: #595959;
+	color: white;
+
+	.staffContent{
+		margin-top:9em;
+
+		h3{
+				font-size:1.5em;
+				padding: 1.7em 1em;
+			}
+
+			h5{
+				padding: 0 0 0.5em 1.5em;
+			}
+
+			a{
+				color: white;
+			}
+
+			p{
+				padding: 0 0 1.5em 1.5em;
+				color: #f4f4f4;
+			}
+
+			a:hover{
+				text-decoration: underline;
+			}
+
+			i{
+				display: inline-block;
+				padding-left:0.5em;
+			}
+
+		@media (min-width: $phone){
+			margin-left:3em;
+		}
+
+
+		@media (min-width: $tablet){
+			margin-left:20em;
+
+		}
+	
+		
+
+
 	}
 
 }
